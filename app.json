@@ -1,0 +1,29 @@
+{
+  "author": "IoT Open",
+  "licence": "MIT",
+  "input": {
+	  "device": {
+		  "name": "Meter identifier",
+		  "type": "text",
+		  "required": true,
+		  "description": "String to identify the meter. Needs to be uniq per installation. Also used as part of the topic_read. E.g. Meter1."
+	  },
+	  "topic_sub": {
+		  "name": "MQTT Topic to subscribe to",
+		  "type": "text",
+		  "required": true,
+		  "description": "The MQTT topic used to get the data from the meter. Must be set to the same as mqtt_topic in the Tibber Pulse."
+	  }
+  },
+  "guide": [
+    {
+      "id": "stage_1",
+      "title": "Configure Electric Meter ",
+      "description": "You need to give the meter an identifier and the topic. The topic has to be the same as in the Tibber Pulse.",
+      "input_fields": [
+		  "device",
+		  "topic_sub"
+      ]
+    }
+  ]
+}
